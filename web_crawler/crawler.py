@@ -5,7 +5,7 @@ import time
 url = 'http://catalog.iastate.edu/planofstudy/#collegeofliberalartsandsciencestext'
 
 file = open("major_class.csv", "w")
-headers = "major, class"
+headers = "college, major, class"
 file.write(headers + "\n")
 
 client = uReq(url)
@@ -16,10 +16,17 @@ soup = bs(page, "html.parser")
 
 temp = soup.findAll("div", {"class", 'tab_content'})
 colleges = temp[1:len(temp) - 1]
+max = ""
 print(len(colleges))
+print(colleges[0])
 count = 0
+collegeCount = 1
+templst = soup.findAll("ul", {"class","clearfix"})
+templst = templst[0].findAll("a")
 
 for college in colleges:
+    collegeName = "College of " + templst[collegeCount].text.strip()
+    print(collegeName)
     majors = college.findAll("li")
     print(college['id'])
     print(len(majors))
@@ -37,6 +44,8 @@ for college in colleges:
         client2.close()
 
         soup2 = bs(page2, "html.parser")
+        titles = soup2.findAll("title")
+        print(titles[0].text.strip())
         lst = soup2.findAll("tr")
         print(len(lst))
 
@@ -52,10 +61,14 @@ for college in colleges:
                 print(className)
                 if not ("1" in className or "2" in className or "3" in className or "4" in className or "5" in className or "6" in className or "7" in className or "8" in className or "9" in className):
                     break
-                    if "/" in className:
-                        index = className.find("/")
-                        print("index of /" + str(index))
-                        className = className[:index]
+                if "3-6" in className:
+                    index = className.find("3-6")
+                    print("index of 3-6" + str(index))
+                    className = className[:index]
+                if "/" in className:
+                    index = className.find("/")
+                    print("index of /" + str(index))
+                    className = className[:index]
                 if "(" in className:
                     index = className.find("(")
                     print("index of (" + str(index))
@@ -91,11 +104,16 @@ for college in colleges:
                         or "general" in className or "international" in className or "arts" in className or "humanites" in className or "select" in className or "course" in className \
                         or "advanced" in className or "culture" in className or "technical" in className or "humanity" in className or "chemistry" in className or "option" in className \
                         or "concentration" in className or "choose" in className or "speech" in className or "statistics" in className or "teacher" in className or "following" in className \
-                        or "approved" in className or "sci" in className or "research" in className or "studio" in className or "approved" in className):
-                    file.write(majorName + "," + className.upper() + "\n" )
+                        or "approved" in className or "sci" in className or "research" in className or "studio" in className or "approved" in className or "edu" in className or "and" in className \
+                        or "communications" in className or "-" in className):
+                    if len(className) > len(max):
+                        max = className
+                    file.write(collegeName + "," + majorName + "," + className.upper() + "\n" )
 
 
         count += 1
+    collegeCount +=1
 
 file.close()
+print(max)
 print("Done! XD")
