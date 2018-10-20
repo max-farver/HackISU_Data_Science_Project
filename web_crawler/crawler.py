@@ -15,7 +15,7 @@ client.close()
 soup = bs(page, "html.parser")
 
 temp = soup.findAll("div", {"class", 'tab_content'})
-colleges = temp[1:len(temp) - 1]
+colleges = temp[1:len(temp)]
 max = ""
 print(len(colleges))
 print(colleges[0])
@@ -38,7 +38,7 @@ for college in colleges:
         collegeName = "BUS"
     elif collegeName == "agriculture and life sciences":
         collegeName = "CALS"
-    print(collegeName)
+    print("college name" + collegeName)
     majors = college.findAll("li")
     print(college['id'])
     print(len(majors))
@@ -57,6 +57,7 @@ for college in colleges:
 
         soup2 = bs(page2, "html.parser")
         nonBreakSpace = u'\xa0'
+        nonBreakSpace2 = u'\x92'
         titles = soup2.findAll("title")
         print(titles[0].text.strip())
         lst = soup2.findAll("tr")
@@ -65,10 +66,12 @@ for college in colleges:
         for temp in lst:
 
             classes = temp.findAll("td", {"class", "codecol"})
+
             print(len(classes))
 
             for cls in classes:
                 className = cls.text.strip().replace(nonBreakSpace, " ")
+                className = cls.text.strip().replace(nonBreakSpace2, " ")
                 print(className)
                 className = className.lower()
                 className = className.replace("and lab", "")
@@ -119,10 +122,9 @@ for college in colleges:
                         or "advanced" in className or "culture" in className or "technical" in className or "humanity" in className or "chemistry" in className or "option" in className \
                         or "concentration" in className or "choose" in className or "speech" in className or "statistics" in className or "teacher" in className or "following" in className \
                         or "approved" in className or "sci" in className or "research" in className or "studio" in className or "approved" in className or "edu" in className or "and" in className \
-                        or "communications" in className or "-" in className):
-                    if len(className) > len(max):
-                        max = className
-                    file.write(collegeName + "," + majorName + "," + className.upper() + "\n" )
+                        or "communications" in className or "-" in className or "english" in className or "series" in className or "maintain" in className or "ensemble" in className or "sociology" in className):
+                    file.write(collegeName + "," + majorName + "," + className.upper() + "\n")
+                    print("wrote")
 
 
         count += 1
