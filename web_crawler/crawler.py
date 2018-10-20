@@ -5,7 +5,7 @@ import time
 url = 'http://catalog.iastate.edu/planofstudy/#collegeofliberalartsandsciencestext'
 
 file = open("major_class.csv", "w")
-headers = "college, major, class"
+headers = "College,Major,Class"
 file.write(headers + "\n")
 
 client = uReq(url)
