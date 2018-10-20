@@ -56,6 +56,7 @@ for college in colleges:
         client2.close()
 
         soup2 = bs(page2, "html.parser")
+        nonBreakSpace = u'\xa0'
         titles = soup2.findAll("title")
         print(titles[0].text.strip())
         lst = soup2.findAll("tr")
@@ -67,7 +68,8 @@ for college in colleges:
             print(len(classes))
 
             for cls in classes:
-                className = cls.text.strip()
+                className = cls.text.strip().replace(nonBreakSpace, " ")
+                print(className)
                 className = className.lower()
                 className = className.replace("and lab", "")
                 print(className)
