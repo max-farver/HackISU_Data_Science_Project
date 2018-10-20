@@ -25,7 +25,19 @@ templst = soup.findAll("ul", {"class","clearfix"})
 templst = templst[0].findAll("a")
 
 for college in colleges:
-    collegeName = "College of " + templst[collegeCount].text.strip()
+    collegeName = templst[collegeCount].text.strip().lower()
+    if collegeName == "liberal arts and sciences":
+        collegeName = "LAS"
+    elif collegeName == "human sciences":
+        collegeName = "H SCI"
+    elif collegeName == "engineering":
+        collegeName = "ENGR"
+    elif collegeName == "design":
+        collegeName = "DSGN"
+    elif collegeName == "business":
+        collegeName = "BUS"
+    elif collegeName == "agriculture and life sciences":
+        collegeName = "CALS"
     print(collegeName)
     majors = college.findAll("li")
     print(college['id'])
