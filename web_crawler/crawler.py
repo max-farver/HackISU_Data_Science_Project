@@ -71,7 +71,6 @@ for college in colleges:
 
             for cls in classes:
                 className = cls.text.strip().replace(nonBreakSpace, " ")
-                className = cls.text.strip().replace(nonBreakSpace2, " ")
                 print(className)
                 className = className.lower()
                 className = className.replace("and lab", "")

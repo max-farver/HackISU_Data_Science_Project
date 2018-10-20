@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce788113-08bf-465a-aeea-cbd20de28087" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../data_cleaning/DFW_done_cleaned.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data_cleaning/DFW_done_cleaned.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_cleaning/HackISU_Ages_cleaning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../data_cleaning/HackISU_Ages_cleaning.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_cleaning/HackISU_majors_cleaning.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../data_cleaning/Major_Rating.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../data_cleaning/Major_Rating.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_cleaning/Means.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../data_cleaning/Means.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_cleaning/major_rating.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data_cleaning/major_rating.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_cleaning/new_dfw_clean.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../data_cleaning/new_dfw_clean.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_cleaning/Untitled.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_cleaning/incomes_cleaned.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data_cleaning/incomes_cleaned.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/major_class.csv" beforeDir="false" afterPath="$PROJECT_DIR$/major_class.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,46 +20,55 @@
     <session id="1025813299">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.23" value="1" />
-          <entry key="project.open.time.3" value="5" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.3" value="6" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Python" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="6132" />
+          <entry key="py" value="6276" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="6132" />
+          <entry key="Python" value="6276" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="73" column="71" selection-start-line="73" selection-start-column="71" selection-end-line="73" selection-end-column="71" />
+            <state relative-caret-position="255">
+              <caret line="72" column="72" selection-start-line="72" selection-start-column="72" selection-end-line="72" selection-end-column="72" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/temp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -91,7 +99,12 @@
       <find>LAS</find>
       <find>college name</find>
       <find>FS HN 467</find>
+      <find>2011</find>
     </findStrings>
+    <replaceStrings>
+      <replace>2015</replace>
+      <replace>2014</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -100,6 +113,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/crawler.py" />
+        <option value="$PROJECT_DIR$/temp.py" />
       </list>
     </option>
   </component>
@@ -114,7 +128,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="web_crawler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_crawler" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -179,12 +203,12 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14937212" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14937212" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44822696" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44822696" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -204,11 +228,18 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="73" column="71" selection-start-line="73" selection-start-column="71" selection-end-line="73" selection-end-column="71" />
+        <state relative-caret-position="255">
+          <caret line="72" column="72" selection-start-line="72" selection-start-column="72" selection-end-line="72" selection-end-column="72" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
         </state>
       </provider>
     </entry>
